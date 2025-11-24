@@ -57,7 +57,7 @@ public class Main {
      * @return a list containing the email addresses in the string.
      */
     public static List<String> extractEmails(String str) {
-        if (str == null) { return null; }
+        if (str == null) { return new ArrayList<>(); }
         final Pattern pattern = Pattern.compile("\\b[\\w.]+@(mail\\.)?utoronto\\.ca\\b");
         final Matcher matcher = pattern.matcher(str);
         final List<String> result = new ArrayList<>();
